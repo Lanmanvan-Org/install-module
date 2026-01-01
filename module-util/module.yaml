@@ -1,0 +1,23 @@
+name: module-manager
+description: "Install, remove, or list LanManVan modules programmatically"
+type: python
+author: hmza
+version: 1.0.0
+tags:
+  - utility
+  - module-management
+options:
+  action:
+    type: string
+    description: "Action to perform: install, remove, or list"
+    required: true
+  repo:
+    type: string
+    description: "Repository name or URL (for 'install' action)"
+    required: false
+  name:
+    type: string
+    description: "Module name pattern (for 'remove' action, supports wildcards like '*')"
+    required: false
+required:
+  - action
