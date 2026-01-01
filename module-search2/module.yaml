@@ -1,0 +1,31 @@
+name: module-search2
+description: "Search for keywords in module filenames, folder names, simplified."
+type: python
+author: hmza
+version: 1.0.0
+tags:
+  - utility
+  - reconnaissance
+  - search
+options:
+  keyword:
+    type: string
+    description: "Keyword or pattern to search for"
+    required: true
+  case_sensitive:
+    type: boolean
+    description: "Enable case-sensitive search"
+    required: false
+    default: false
+  search_content:
+    type: boolean
+    description: "Search inside file contents (text files only)"
+    required: false
+    default: true
+  max_results:
+    type: integer
+    description: "Maximum number of results to return"
+    required: false
+    default: 100
+required:
+  - keyword
